@@ -1,0 +1,130 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#f3802b" />
+	<link rel="stylesheet" type="text/css" href="estilos.css"/>
+	<link rel="icon" href="favicon.png">
+	<title>Multimedia</title>
+    <script src="js/fondoMovil.js"></script>
+	<script>
+		//Activa/desactiva una capa invisible tras la imagen a pantalla completa para que al hacer clic en ella se quite la imagen
+		function activarFondo(){
+			document.getElementById('fondoPantallaCompleta').style.display="block";
+		}
+		function desactivarFondo(){
+			document.getElementById('fondoPantallaCompleta').style.display="none";
+		}
+		function ponerImagen(){
+			document.getElementById('mediaPantallaCompleta').style.display='block';
+		}
+		function quitarImagen(){
+			document.getElementById('mediaPantallaCompleta').style.display="none";
+			document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/nada.png';
+		}
+	</script>
+</head>
+<body>
+
+    <a href="index.html" class="banner , bannerMultimedia">
+        ismathings.es
+		<div id="back">REGRESAR AL ÍNDICE</div>
+    </a>
+	
+	<div class="curriculum">
+		<a class="curriculumHover">
+			<img alt="curriculumHover" src="img/curriculumHover.png" />
+		</a>
+	</div>
+	
+	<div class="content">
+        <div id="huecoBanner"></div>
+        
+		<article class="a1 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Habitación
+            </div>
+            <div class="cuerpoMultimedia">
+                <img src="img/multimedia/Youtube.png" onclick="document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/Youtube.png';ponerImagen(); activarFondo()" />
+            </div>
+        </article>
+        
+		<article class="a2 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Caida con físicas
+            </div>
+            <div class="cuerpoMultimedia">
+                <img src="img/multimedia/fondoMani.png" onclick="document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/fondoMani.png';ponerImagen(); activarFondo()" />
+            </div>
+        </article>
+        
+		<article class="a3 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                El Peque
+            </div>
+            <div class="cuerpoMultimedia">
+                <img src="img/multimedia/Peque.png" onclick="document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/Peque.png';ponerImagen(); activarFondo()" />
+            </div>
+        </article>
+        
+		<article class="a4 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Buen asiento
+            </div>
+            <div class="cuerpoMultimedia">
+                <video controls loop muted>
+                    <source src="img/multimedia/error.mp4" type="video/mp4">
+                </video>
+            </div>
+        </article>
+        
+		<article class="a5 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Bombillas
+            </div>
+            <div class="cuerpoMultimedia">
+                <img src="img/multimedia/Bombillas.png" onclick="document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/Bombillas.png';ponerImagen(); activarFondo()" />
+            </div>
+        </article>
+        
+		<article class="a6 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Castillo minimalista
+            </div>
+            <div class="cuerpoMultimedia">
+                <img src="img/multimedia/Castillo.png" onclick="document.getElementById('mediaPantallaCompleta').src='img/multimedia/HD/Castillo.png';ponerImagen(); activarFondo()" />
+            </div>
+        </article>
+        
+        
+		<article class="a7 , sinSombra">
+            <div class="tituloArticle , colorMultimedia">
+                Pañuelo
+            </div>
+            <div class="cuerpoMultimedia">
+                <video controls loop muted>
+                    <source src="img/multimedia/panuelo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </article>        
+        
+		<article class="a8">
+            <div class="tituloArticle , colorMultimediaNoAnimation">
+                Herramientas utilizadas
+            </div>
+            <div class="cuerpoArticle">
+                <img alt="Herramientas utilizadas" src="img/multimedia/ProgramasUtilizados.png" />
+				<p class="centrado"><a class="colorMultimedia" href="https://www.blender.org/" target="_blank">BLENDER</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a class="colorMultimedia" href="http://www.gimp.org/" target="_blank">GIMP</a><br/><br/></p>
+            </div>
+        </article>
+        
+	</div>
+
+	
+	
+	<div id="fondoPantallaCompleta" onclick="quitarImagen(); desactivarFondo()">
+		<img src="" id="mediaPantallaCompleta" onclick="quitarImagen(); desactivarFondo()" />
+	</div>
+
+
+</body>
+</html>

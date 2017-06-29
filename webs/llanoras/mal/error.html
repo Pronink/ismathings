@@ -1,0 +1,78 @@
+<html>
+<head>
+	<style type="text/css">
+	@font-face {
+font-family: Roboto;
+src: url('Roboto-Medium.ttf');
+}
+@font-face {
+font-family: Roboto_IE;
+src: url('Roboto-Medium.woff');
+}
+* {
+	font-family: Roboto, Roboto_IE;
+	border: 0px;
+	margin: 20px;
+	color: #1c1c1c;
+	background-color: #FFFFFF;
+}
+html, body {
+	margin: 0px;
+}
+br {
+	margin: 25px;
+}
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+	}
+.enlace {
+	position:absolute;
+	z-index:4;
+	width: 105px;
+	height: 18px;
+	box-shadow: 0px 1px 2px 0px #000000;
+	background-color: white;
+	padding: 10px;
+	border-radius: 0px;
+	margin-left: 20px;
+	-webkit-transition: background-color 1s;
+	transition: background-color 1s;
+}
+.enlace:hover {
+	background-color: #f44336;
+	-webkit-transition: background-color 0.25s;
+	transition: background-color 0.25s;
+}
+video {
+	position:absolute;
+	z-index:2;
+	width: 1100px;
+	height: 619px;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tapon {
+	position:absolute;
+	z-index:3;
+	background-color: rgba(255,0,255,0);
+	width: 1100px;
+	height: 619px;
+	margin: 0px;
+}
+.lienzo {
+	width: 1100px;
+	height: auto;
+	margin: auto;
+}
+	</style>
+</head>
+<body><div class="lienzo">
+<a href="http://pronink.noip.me/" class="enlace">Volver a Inicio</a>
+<video width="1100" height="619" autoplay>
+	<source src="error.mp4" type="video/mp4">
+</video>
+<div class="tapon">
+</div>
+</div></body>
+</html>

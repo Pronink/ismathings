@@ -1,0 +1,506 @@
+@font-face {
+font-family: Roboto;
+src: url('fuentes/Roboto-Medium.ttf');
+}
+@font-face {
+font-family: Roboto_IE;
+src: url('fuentes/Roboto-Medium.woff');
+}
+* {
+	margin: 0px;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto, Roboto_IE;
+	color: #4F4F4F;
+	background-color: #F0F0F0;
+	overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+    
+    background-image: url(../img/suciedad.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+a, a:visited {
+	text-decoration: none;
+	color: #2F2F2F;
+	}
+a:hover, a:active {
+	color: #2F2F2F;
+}
+.centrado {
+	text-align: center;
+}
+.sinSombra {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+.sinFlotar {
+    clear: both;
+}
+.ancho100 {
+	width: 100%;
+}
+.sombra {
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+video{
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+/* ----- BANNER ------ */
+.banner {
+    position: fixed;
+	display: inline-block;
+    width: 100%;
+	height: 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    font-size: 76px;
+	color: #2F2F2F;
+    z-index: 10;
+    
+    animation: banner;
+	animation-duration: 0.5s;
+}
+@keyframes banner {
+  0% {
+    background-color: #F0F0F0;
+  }
+  100% {
+	background-color: none;
+  }
+}
+#huecoBanner {
+    display: block;
+    float: none;
+    width: 100%;
+    height: 120px;
+}
+#back {
+	font-size: 14px;
+	opacity: 0;
+	animation: back;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	margin-left: 200px;
+}
+@keyframes back {
+	0% {
+		opacity: 0;
+		margin-left: 200px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0px;
+	}
+}
+.bannerProgramas {
+    background-color: #00c85f;
+    transition: all 0.3s;
+}
+.bannerProgramas:hover {
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+}
+.bannerWebs {
+    background-color: #d3dd2f;
+    transition: all 0.3s;
+}
+.bannerWebs:hover {
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+}
+.bannerMultimedia {
+    background-color: #f3802b;
+    transition: all 0.3s;
+}
+.bannerMultimedia:hover {
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+}
+.bannerCorreo {
+    background-color: #fe6355;
+    transition: all 0.3s;
+}
+.bannerCorreo:hover {
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+}
+.bannerTwitter {
+    background-color: #2cbaf6;
+    transition: all 0.3s;
+}
+.bannerTwitter:hover {
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+}
+
+/* ----- CONTENT ------ */
+.content {
+	top:0;
+	left: 0;
+	right: 0;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+	width: 95%;
+    margin: auto;
+    padding-top: 120px;
+	padding: 0px;
+	text-align: center;
+}
+
+/* ----- ARTÍCULOS ------ */
+article {
+    width: 540px;
+    min-width: 540px;
+    margin: 30px;
+    padding: 0px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    /*opacity: 0;*/
+	margin-top: 3000px;
+    animation: article;
+    animation-duration: 1s;
+	animation-fill-mode: forwards; 
+}
+/* Los .tituloArticle son modificados o sustituidos por los .colorX */
+article .tituloArticle {
+    padding: 10px;
+    font-size: 24px;
+    cursor: default;
+    height: 30px;
+}
+article .cuerpoArticle {
+    padding: 13px;
+    text-align: left;
+    background-color: white;
+}
+article p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+article .cuerpoArticle img {
+    display: block;
+    margin: 0px auto;
+}
+@keyframes article {
+  0% {
+    /*opacity: 0;*/
+	margin-top: 3000px;
+  }
+  100% {
+	/*opacity: 1;*/
+	margin-top: 30px;
+  }
+}
+/* ----- ARTICULOS WEB ------ */
+.articleWeb {
+	width: 80%;
+	max-width: 1200px;
+}
+/* Solo para las Webs */
+.pieArticle {
+	position: relative;
+	padding: 0px;
+	cursor: pointer;
+    overflow: hidden;
+}
+.pieArticle img {
+	width: 100%;
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
+.pieArticle img:hover {
+	transform:scale(1.08);
+	z-index: 0;
+}
+.pieDesc {
+	position: absolute;
+	opacity: 0;
+	z-index: 5;
+	width: 300px;
+	height: calc(100% - 40px);
+	right: -300px;
+	background-color: rgba(211,221,47,0.8);
+	text-align: center;
+	padding: 20px;
+	cursor: pointer;
+	transition: all 1.5s;
+}
+.pieArticle:hover .pieDesc {
+	right: -0px;
+	opacity: 1;
+	transition: all 0.5s;
+}
+@media screen and (max-width: 1266px) {
+	.pieDesc {
+		right: 0px;
+		opacity: 1;
+		transition: all 1.5s;
+	}
+}
+
+/* ----- ARTICULOS MULTIMEDIA ------ */
+/* En vez de .cuerpoArticle, usar .cuerpoMultimedia en los artículos Multimedia */
+.cuerpoMultimedia{
+    padding: 0px;
+    text-align: left;
+    background-color: white;
+}
+.cuerpoMultimedia a img{
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.cuerpoMultimedia > img{
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.cuerpoMultimedia > img:hover{
+    cursor: zoom-in;
+}
+.cuerpoMultimedia video{
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+/* ----- IMAGENES QUE SE AMPLIFICAN ------ */
+#mediaPantallaCompleta {
+	display: none;
+	position: fixed;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	max-width: 95%;
+	max-height: 95%;
+	z-index: 30;
+	background-color: white;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+	cursor: zoom-out;
+	opacity: 1;
+	animation: aparecerImagen;
+    animation-duration: 0.5s;
+	transition: all 0.2s;
+}
+#mediaPantallaCompleta:active {
+	transition: all 0.2s;
+	opacity: 0.3;
+	max-width: 90%;
+	max-height: 90%;
+}
+@keyframes aparecerImagen {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+	opacity: 1;
+
+  }
+}
+#fondoPantallaCompleta {
+	display: none;
+	position: fixed;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 25;
+	cursor: zoom-out;
+}
+#fondoPantallaCompleta:active #mediaPantallaCompleta {
+	transition: all 0.2s;
+	opacity: 0.3;
+	max-width: 90%;
+	max-height: 90%;
+}
+/* ----- COLOR BANNERS DE LOS ARTÍCULOS ------ */
+article > .colorProgramas {
+    background-color: #00c85f;
+}
+article > .colorWebs {
+    background-color: #d3dd2f;
+}
+article > .colorMultimediaNoAnimation {
+    background-color: #f3802b;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* El .colorMultimedia sobreescribe las reglas de los banners de los artículos .tituloArticle */
+article > .colorMultimedia {
+    background-color: #f3802b;
+    margin-top: 0px;
+    margin-bottom: -50px;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+	article:hover > .colorMultimedia {
+		margin-top: -20px;
+		margin-bottom: 0px;
+		opacity: 1;
+		transition: all 0.25s;
+	}
+	article .cuerpoMultimedia {
+		margin-bottom: 0px;
+		opacity: 0.9999;
+		transition: all ease-in 0.5s;
+	}
+	article:hover .cuerpoMultimedia {
+		margin-bottom: -30px;
+		opacity: 1;
+		transition: all 0.25s;
+	}
+		@media screen and (max-width: 1266px) {
+			article > .colorMultimedia {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			opacity: 1;
+			transition: all 1s;
+			transition-delay: 0.5s;
+			}
+			article:hover > .colorMultimedia {
+			margin-top: 0px;
+			}
+			article:hover .cuerpoMultimedia {
+			margin-bottom: 0px;
+			transition: all 0s;
+			}
+		}
+article > .colorCorreo {
+    background-color: #fe6355;
+}
+article > .colorTwitter {
+    background-color: #2cbaf6;
+}
+
+/* ----- COLOR DE LOS ENLACES ----- */
+p .colorProgramas {
+    color: #00c85f;
+	transition: all 0.25s;
+}
+p .colorWebs {
+    color: #d3dd2f;
+	transition: all 0.25s;
+}
+p .colorMultimedia {
+    color: #f3802b;
+	transition: all 0.25s;
+}
+p .colorCorreo {
+    color: #fe6355;
+	transition: all 0.25s;
+}
+p .colorTwitter {
+    color: #2cbaf6;
+	transition: all 0.25s;
+}
+
+p .colorProgramas:hover {
+    color: white;
+	background-color: #00c85f;
+	transition: all 0.25s;
+}
+p .colorWebs:hover {
+    color: white;
+	background-color: #d3dd2f;
+	transition: all 0.25s;
+}
+p .colorMultimedia:hover {
+    color: white;
+	background-color: #f3802b;
+	transition: all 0.25s;
+}
+p .colorCorreo:hover {
+    color: white;
+	background-color: #fe6355;
+	transition: all 0.25s;
+}
+p .colorTwitter:hover {
+    color: white;
+	background-color: #2cbaf6;
+	transition: all 0.25s;
+}
+
+
+/* ----- ANIMACIÓN DE ENTRADA POR TIEMPOS ----- */
+.a1 {
+    animation-delay: 0.1s;
+}
+.a2 {
+    animation-delay: 0.2s;
+}
+.a3 {
+    animation-delay: 0.3s;
+}
+.a4 {
+    animation-delay: 0.4s;
+}
+.a5 {
+    animation-delay: 0.5s;
+}
+.a6 {
+    animation-delay: 0.6s;
+}
+.a7 {
+    animation-delay: 0.7s;
+}
+.a8 {
+    animation-delay: 0.8s;
+}
+.a9 {
+    animation-delay: 0.9s;
+}
+
+/* ----- BOTON CURRICULUM ----- */
+.curriculum {
+	position: fixed;
+	z-index: 15;
+	display: inline-block;
+	right: calc((100% - 965px) / 2);
+	margin: 10px;
+	padding: 0px;
+	width: 100px;
+	height: 100px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    background-image: url("img/curriculum.png");
+	background-size: cover;
+	transition: border-radius 1.5s;
+	animation-name: desaparecerCurriculum;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards; 
+}
+.curriculum:hover {
+	border-radius: 50px;
+	transition: border-radius 0.5s;
+}
+.curriculum a {
+	position: absolute ;
+	z-index: 15;
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	filter: brightness(100%) contrast(100%);
+	-webkit-filter: brightness(100%) contrast(100%);
+	transition: all 0.5s;
+}
+.curriculum:hover a {
+	opacity: 1;
+	filter: brightness(105%) contrast(100%);
+	-webkit-filter: brightness(105%) contrast(100%);
+	transition: all 0.5s;
+}
+.curriculum a img {
+	border-radius: 50px;
+}
+@keyframes desaparecerCurriculum {
+  0% {
+    top: 0;
+  }
+  100% {
+	top: -150;
+
+  }
+}
